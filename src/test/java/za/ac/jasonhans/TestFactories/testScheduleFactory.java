@@ -10,7 +10,7 @@ import za.ac.jasonhans.FactoryInterfaces.ScheduleFactoryInterface;
 /**
  * Created by Admin on 2016/04/03.
  */
-public class testScheduleFactory {
+public class TestScheduleFactory {
 
     @Test
     public void testCreate()

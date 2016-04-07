@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * Created by Admin on 2016/04/03.
  */
-public class testScheduleTypeFactory {
+public class TestScheduleTypeFactory {
     @Test
     public void testCreate()
     {

@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * Created by Admin on 2016/04/03.
  */
-public class testAnimalFactory {
+public class TestAnimalFactory {
 
     @Test
     public void testCreate()

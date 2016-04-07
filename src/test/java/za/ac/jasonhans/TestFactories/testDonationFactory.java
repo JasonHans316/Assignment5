@@ -11,7 +11,7 @@ import java.sql.Date;
 /**
  * Created by Admin on 2016/04/03.
  */
-public class testDonationFactory {
+public class TestDonationFactory {
     @Test
     public void testCreate()
     {

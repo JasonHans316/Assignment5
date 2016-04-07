@@ -11,14 +11,14 @@ import java.util.Date;
 /**
  * Created by Admin on 2016/04/03.
  */
-public class testAdoptionFactory {
+public class TestAdoptionFactory {
     @Test
     public void testCreate()
     {
         AdoptionFactoryInterface factory = new AdoptionFactory();
         Adoption original = factory.createAdoption("First Dog", new Date(2016,02,24));
 
-        Assert.assertEquals("First Dog", original.getComment());
+        Assert.assertEquals(new Date(2016,02,24), original.getAdoptionDate());
     }
 
     @Test
@@ -26,10 +26,10 @@ public class testAdoptionFactory {
     {
         AdoptionFactoryInterface factory = new AdoptionFactory();
         Adoption original = factory.createAdoption("First Dog", new Date(2016,02,24));
-        Adoption copy = new Adoption.Builder("New Dog").copy(original).build();
+        Adoption copy = new Adoption.Builder("New Dog").copy(original).adoptionDate(new Date(2016,04,06)).build();
 
-        Assert.assertEquals("First Dog", original.getComment());
-        Assert.assertEquals("First Dog", copy.getComment());
-        Assert.assertEquals(original.getAdoptionDate(), copy.getAdoptionDate());
+        Assert.assertEquals(new Date(2016,02,24), original.getAdoptionDate());
+        Assert.assertEquals(new Date(2016,04,06), copy.getAdoptionDate());
+        Assert.assertNotEquals(original.getAdoptionDate(), copy.getAdoptionDate());
     }
 }
